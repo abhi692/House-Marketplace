@@ -68,7 +68,7 @@ function Profile() {
             value={name}
             onChange={onChange}
             />
-            <input type="text" 
+            <input type="email" 
             id="email" 
             className={!changeDetails ? "profileEmail" : "profileEmailActive"} 
             disabled={!changeDetails}
