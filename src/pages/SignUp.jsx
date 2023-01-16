@@ -6,6 +6,7 @@ import {ReactComponent as ArrowRightIcon} from "../assets/svg/keyboardArrowRight
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
+import OAuth from "../components/OAuth";
 
 function SignUp() {
   const [showPassword,setShowPassword] = useState(false)
@@ -78,6 +79,7 @@ function SignUp() {
                 alt="show password" 
                 className="showPassword" 
                 onClick={() =>setShowPassword((prevState)=>!prevState)}/>
+            </div>
                 <Link to="/forgot-password" className="forgotPasswordLink">
                   Forgot Password
                 </Link>
@@ -89,9 +91,9 @@ function SignUp() {
                     <ArrowRightIcon fill="#ffffff" width="34px" height="34px"/>
                   </button>
                 </div>
-            </div>
           </form>
-          {/* {Google OAuth} */}
+          <OAuth/>
+
           <Link to="/sign-in" className="registerLink">
             Sign In Instead
           </Link>
